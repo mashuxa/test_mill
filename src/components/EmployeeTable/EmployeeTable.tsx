@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from 'react';
+import { useState, useCallback, FC } from 'react';
 import styles from './styles.module.scss';
 import { Employee } from "./types";
 import EmployeeRow from "./EmployeeRow/EmployeeRow";
@@ -6,7 +6,7 @@ import EmployeeForm from "./EmployeeForm/EmployeeForm";
 
 const defaultData: Employee = { name: 'Jan', surname: 'Kowalski' };
 
-const EmployeeTable: React.FC = () => {
+const EmployeeTable: FC = () => {
   const [employees, setEmployees] = useState<Employee[]>([defaultData]);
   const handleRemoveEmployee = useCallback((index: number) => {
     setEmployees((prevEmployees) =>
