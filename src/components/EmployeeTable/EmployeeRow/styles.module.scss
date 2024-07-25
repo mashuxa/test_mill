@@ -1,0 +1,15 @@
+.cell {
+  position: relative;
+  align-content: center;
+}
+
+.btn {
+  position: absolute;
+  right: 0;
+  translate: 300%;
+}
+
+.cell:has(button:hover),
+.cell:has(button:hover) + .cell, {
+  background-color: red;
+}
